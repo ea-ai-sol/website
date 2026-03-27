@@ -412,7 +412,7 @@ const ContactSection = () => {
             Email Me
           </a>
           <a 
-            href="https://linkedin.com" 
+            href="https://www.linkedin.com/in/farrukhmalik/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="flex items-center gap-3 px-8 py-4 bg-slate-100 hover:bg-slate-200 text-slate-900 font-bold rounded-xl border border-slate-200 transition-all"
@@ -440,8 +440,8 @@ const Footer = () => {
           © {new Date().getFullYear()} Neurovi@. All rights reserved.
         </p>
         <div className="flex gap-6">
-          <a href="#" className="text-slate-400 hover:text-blue-600 transition-colors"><Mail className="w-5 h-5" /></a>
-          <a href="#" className="text-slate-400 hover:text-blue-600 transition-colors"><Linkedin className="w-5 h-5" /></a>
+          <a href="mailto:farrukh.newzealand@outlook.com" className="text-slate-400 hover:text-blue-600 transition-colors"><Mail className="w-5 h-5" /></a>
+          <a href="https://www.linkedin.com/in/farrukhmalik/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-blue-600 transition-colors"><Linkedin className="w-5 h-5" /></a>
         </div>
       </div>
     </footer>
