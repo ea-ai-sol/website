@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-[#0a0a0b] text-gray-100 antialiased;
+  }
+}
+
+@layer utilities {
+  .bg-radial-gradient {
+    background: radial-gradient(var(--tw-gradient-stops));
+  }
+}
+
+/* Custom Blueprint Grid Animation */
+@keyframes grid-fade {
+  from { opacity: 0; }
+  to { opacity: 0.2; }
+}
+
+.blueprint-grid {
+  animation: grid-fade 2s ease-out forwards;
+}
