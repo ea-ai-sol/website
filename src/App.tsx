@@ -353,7 +353,7 @@ const AboutSection = () => {
             <h2 className="text-5xl font-bold text-slate-900 mb-8 tracking-tight">Farrukh Iqbal</h2>
             <div className="space-y-6 text-slate-600 leading-relaxed">
               <p>
-                A seasoned Enterprise and Solution Architect with over 19 years of international experience spanning banking, education, telecommunications, healthcare, and aviation sectors.
+                A seasoned Enterprise and Solution Architect with over 20 years of international experience spanning banking, education, telecommunications, healthcare, and aviation sectors.
               </p>
               <p>
                 Currently strategizing and architecting cutting-edge Generative AI, Agentic AI, and RAG-based solutions. Farrukh has a strong track record of delivering complex digital transformations at organizations like Westpac NZ and Air New Zealand.
@@ -363,12 +363,42 @@ const AboutSection = () => {
               </p>
             </div>
             
-            <div className="mt-10 flex flex-wrap gap-3">
-              {['BBA-ITM(Hons)', 'MBA-IT', 'PMI-ACP', 'ICAgile', 'Azure', 'AWS'].map(tag => (
-                <span key={tag} className="px-4 py-2 bg-white border border-slate-200 rounded-lg text-xs font-medium text-slate-600 shadow-sm">
-                  {tag}
-                </span>
-              ))}
+            <div className="mt-10">
+              <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4">Certifications & Affiliations</h3>
+              <div className="flex flex-wrap gap-8 items-center mb-6">
+                {[
+                  { name: 'Azure', logo: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Microsoft_Azure.svg' },
+                  { name: 'AWS', logo: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg' },
+                  { name: 'OpenAI', logo: 'https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg' },
+                  { name: 'Anthropic', logo: 'https://upload.wikimedia.org/wikipedia/commons/7/78/Anthropic_logo.svg' },
+                  { name: 'PMI-ACP', logo: 'https://www.vectorlogo.zone/logos/pmi/pmi-icon.svg' },
+                  { name: 'ICAgile', logo: 'https://icagile.com/assets/images/icagile-logo.svg' },
+                  { name: 'CAUDIT', logo: 'https://www.caudit.edu.au/sites/default/files/CAUDIT%20Logo%20-%20Blue%20Text%20-%20No%20Background.png' }
+                ].map(cert => (
+                  <div key={cert.name} className="group relative">
+                    <img 
+                      src={cert.logo} 
+                      alt={cert.name} 
+                      className="h-6 md:h-8 w-auto grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+                      referrerPolicy="no-referrer"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).style.display = 'none';
+                        const span = document.createElement('span');
+                        span.className = "text-xs font-bold text-slate-400";
+                        span.innerText = cert.name;
+                        (e.target as HTMLImageElement).parentElement!.appendChild(span);
+                      }}
+                    />
+                  </div>
+                ))}
+              </div>
+              <div className="flex flex-wrap gap-3">
+                {['BBA-ITM(Hons)', 'MBA-IT'].map(tag => (
+                  <span key={tag} className="px-3 py-1 bg-slate-50 border border-slate-200 rounded-md text-[10px] font-bold text-slate-500 uppercase tracking-wider">
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
 
@@ -383,7 +413,7 @@ const AboutSection = () => {
             {/* Stats Overlay */}
             <div className="absolute -bottom-6 -left-6 p-6 bg-white border border-slate-200 rounded-2xl shadow-2xl">
               <div className="flex items-center gap-4">
-                <div className="text-3xl font-bold text-blue-600">19+</div>
+                <div className="text-3xl font-bold text-blue-600">20+</div>
                 <div className="text-xs uppercase tracking-widest text-slate-500 font-bold">Years of <br />Experience</div>
               </div>
             </div>
